@@ -1,32 +1,20 @@
-def data_colection():
+def data_collection():
+    response = ''
     msg_0 = "Enter an equation"
     msg_1 = "Do you even know what numbers are? Stay focused!"
     msg_2 = "Yes ... an interesting math operation. You've slept through all classes, haven't you?"
+    while response != 'exit':
+        print(msg_0)
+        user_input = input().split()
+        x_var = float(user_input[0])
+        oper = str(user_input[1])
+        y_var = float(user_input[2])
 
-    print(msg_0)
-    calc = input().split()
-    num_x = float(calc[0])
-    num_y = float(calc[2])
-    oper = str(calc[1])
-
-    while type(num_x) != 'float' or type(num_y) != 'float':
-        print(msg_1)
-        calc = input().split()
-        num_x = float(calc[0])
-        num_y = float(calc[2])
-        oper = str(calc[1])
-
-    while '+-*/' not in oper:
-        print(msg_2)
-        calc = input().split()
-        num_x = float(calc[0])
-        num_y = float(calc[2])
-        oper = str(calc[1])
-        while type(num_x) != 'float' or type(num_y) != 'float':
+        if type(x_var) == 'int' and type(y_var) == 'int':
+            if '+-*/' in oper:
+                response = 'exit'
+            else:
+                print(msg_2)
+        else:
             print(msg_1)
-            calc = input().split()
-            num_x = float(calc[0])
-            num_y = float(calc[2])
-            oper = str(calc[1])
-
-data_colection()
+data_collection()
