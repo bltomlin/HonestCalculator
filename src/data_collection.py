@@ -2,6 +2,8 @@
 This module contains a function that will convert
 data to desired type in this project.
 """
+from src import type_check
+
 
 def data_collection(user_input):
     """
