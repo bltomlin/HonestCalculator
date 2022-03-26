@@ -2,6 +2,7 @@
 This module contains the input function.
 """
 
+
 def grab_input():
     """
     Grabs users input and splits it into a string list.
