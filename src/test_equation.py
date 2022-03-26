@@ -2,6 +2,7 @@
 This file contains a function used to validate an user entered
 equation.
 """
+from src import data_collection, grab_input
 
 
 def test_equation(x_var, oper, y_var):
@@ -16,7 +17,7 @@ def test_equation(x_var, oper, y_var):
     msg_1 = "Do you even know what numbers are? Stay focused!"
     msg_2 = "Yes ... an interesting math operation. You've slept through all classes, haven't you?"
     response = ''
-    
+
     while response != 'exit':
         if type(x_var) is float and type(y_var) is float:
             if oper in ['+', '-', '*', '/']:
