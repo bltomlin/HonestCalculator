@@ -24,12 +24,10 @@ def test(x_var, oper, y_var):
             else:
                 print(msg_2)
                 print("Enter an equation")
-                new_input = grab_input()
                 x_var, oper, y_var = data_collection(grab_input())
         else:
             print(msg_1)
             print("Enter an equation")
-            new_input = grab_input()
             x_var, oper, y_var = data_collection(grab_input())
 
 
