@@ -6,11 +6,9 @@ data to desired type in this project.
 def data_collection(user_input):
     """
     Assigns data type based on compatibility.
-    Ex: 'm' will be assigned str. 2.3 or 2 
-    will be assigned float.
+    Ex: 'm' will be assigned str. 2.3 or 2 will be assigned float.
 
-    :param user_input: list containing strings
-    from user input
+    :param user_input: list containing strings from user input
     :return: variables with correct types for program
     """
     x_var = type_check(user_input[0])
