@@ -11,10 +11,13 @@ def honest_calculator():
 
     :return: void
     """
+    memory = 0
     print("Enter an equation")
     user_input = grab_input()
-    x_var, oper, y_var = data_collection(user_input)
-    test_equation(x_var, oper, y_var)
+    x_var, oper, y_var = data_collection(user_input, memory)
+    x_var, oper, y_var = test(x_var, oper, y_var)
+    result = operator_check(x_var, oper, y_var, memory)
+    store_result(result, memory)
 
 
 if __name__ == '__main__':
