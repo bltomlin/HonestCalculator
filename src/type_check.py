@@ -4,12 +4,13 @@ on a user entered equation.
 """
 
 
-def type_check(some_input):
+def type_check(some_input, memory):
     """
     Assign the correct type on a user entered equation to avoid
     accomodate a failure to input numbers in an equation.
 
     :param some_input: an element from the user input list.
+    :param memory: user answer stored for future use
     """
     try: 
         some_input = float(some_input)
