@@ -1,6 +1,6 @@
 def check(x_var, y_var, oper):
 	msg = ""
-	if 0 < x_var.is_integer() < 10 and 0 < y_var .is_integer() < 10:
+	if is_one_digit(x_var) and is_one_digit(y_var):
 		msg += " ... lazy"
 	if (x_var == 1 or y_var == 1) and oper == '*':
 		msg += " ... very lazy"
