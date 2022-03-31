@@ -36,3 +36,4 @@ def operator_check(x_var, oper, y_var, memory):
                 print("Enter an equation")
                 x_var, oper, y_var = data_collection(grab_input(), memory)
                 test(x_var, oper, y_var)
+                check(x_var, y_var, oper)
