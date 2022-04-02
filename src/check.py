@@ -1,6 +1,9 @@
 """
 This file contains a function used to evaluate the difficulty of a user entered equation
 """
+from src import is_one_digit
+
+
 def check(x_var, y_var, oper):
 	"""
     Evaluates the students bravery when entering equations.
