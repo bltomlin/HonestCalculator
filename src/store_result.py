@@ -7,27 +7,29 @@ def store_result(result, memory):
     :param result: answer from equation
     :param memory: double value user saves for future use
     """
+def store_result(result, memory):
 	msg = ["Are you sure? It is only one digit! (y / n)",
 	"Don't be silly! It's just one number! Add to the memory? (y / n)",
 	"Last chance! Do you really want to embarrass yourself? (y / n)"]
 	_exit = ''
 	while _exit != 'exit':
+		msg_index = 0
 		print("Do you want to store the result? (y / n):")
 		answer = input()
 		if answer == "y":
-			while is_one_digit(result) == True and answer == "y":
-				msg_index = 0
-				print(msg[msg_index])
-				answer = input()                
-				if answer == "y":
-					if msg_index < 2:
-						msg_index = msg_index + 1
-				else:
-					if answer == "n":
-						break
+			if is_one_digit(result) == True and answer == "y":
+				while is_one_digit(result) == True and answer == "y" and msg_index <= 2:
+					print(msg[msg_index])
+					answer = input()                
+					if answer == "y":
+						msg_index += 1
+						if msg_index == 2:
+							memory = result
 					else:
-						pass
-				memory = result
+						if answer == "n":
+							break
+						else:
+							pass
 			else:
 				memory = result
 			print("Do you want to continue calculations? (y / n):")
