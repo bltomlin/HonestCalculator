@@ -2,7 +2,7 @@
 This file contains the main entry point for the program that
 dictates all logical flow.
 """
-from src import data_collection, grab_input, test_equation
+from src import call_functions, store_result
 
 
 def honest_calculator():
