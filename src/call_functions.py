@@ -1,6 +1,9 @@
 """
 This file contains a function used to call most of the main program.
 """
+from src import data_collection, test, check, operator_check, grab_input
+
+
 def call_functions(memory):
 	"""
     Method for calling main functions in the program.
